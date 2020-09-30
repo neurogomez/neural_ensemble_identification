@@ -1,0 +1,9 @@
+% load data
+addpath('matlab','data')
+load('calcium_data.mat')
+load('stimuli_info.mat')
+
+% data summary
+num_fields = 8;
+dat_summary = get_info(data,stimuli_info, num_fields);
+
