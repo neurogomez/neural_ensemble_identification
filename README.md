@@ -1,3 +1,4 @@
+
 # Feldman Lab - Identifying Neural Ensembles
 *Goal*: identify neural ensembles in S1 from calcium imaging data
 *Method*: TBD
@@ -36,7 +37,7 @@ __Instructions__
 ### Week 2: Sept 28 - Oct 2
 *Plan*:
 - ~~create get_info() fxn to extract trial information data~~
-- determine method for getting spikes from $\deltaF/F$
+- determine method for getting spikes from dF/f
 - write function to extract individual trial traces from movies
 - write function to determine spikes and bin time - binarize firing  
 - write function to organize data into population arrary
