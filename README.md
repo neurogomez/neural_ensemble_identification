@@ -10,7 +10,7 @@ Han Chin's longitudinal 2P calcium imaging data
 
 __Data Summary__
 
-![Data Summary](documents\dat_summary.png)
+![Data Summary](documents/dat_summary.png)
 
 - 2 mice: 4 FOVs each
 - frame rate is 7.4811 Hz
