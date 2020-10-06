@@ -36,9 +36,9 @@ __Instructions__
 
 ### Plan
 - ~~create get_info() fxn to extract trial information data~~
-- ~~determine method for determining spikes from dF/f: what threshold?
+- ~~determine method for determining spikes from dF/f: what threshold?~~
 - ~~write function to extract individual trial traces from movies~~ --> Han Chin already has function
-- ~~write function to determine spike or no spike -> using dF/F threhold 
+- ~~write function to determine spike or no spike -> using dF/F threhold ~~
 - write function to organize data into population arrary: all trials vs blanks
 - determine which method to try first for ensemble identification
    - PCA followed by k-means?, SVD?, look at literature
