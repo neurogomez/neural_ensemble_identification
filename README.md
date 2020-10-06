@@ -34,11 +34,12 @@ __Instructions__
 - data can be downloaded from https://drive.google.com/drive/folders/1O0PwG1FuS7czanlooS2ZPNizAnqvUCWR?usp=sharing
 - run 'main.m'
 
-### Week 2: Sept 28 - Oct 2
-*Plan*:
+### Plan
 - ~~create get_info() fxn to extract trial information data~~
-- determine method for getting spikes from dF/f
-- write function to extract individual trial traces from movies
-- write function to determine spikes and bin time - binarize firing  
-- write function to organize data into population arrary
-- determine method to try first for ensemble identification
+- ~~determine method for determining spikes from dF/f: what threshold?
+- ~~write function to extract individual trial traces from movies~~ --> Han Chin already has function
+- ~~write function to determine spike or no spike -> using dF/F threhold 
+- write function to organize data into population arrary: all trials vs blanks
+- determine which method to try first for ensemble identification
+   - PCA followed by k-means?, SVD?, look at literature
+- start writing neural ensemble identification algorithm 
