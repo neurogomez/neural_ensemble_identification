@@ -1,18 +1,13 @@
-r = 6;
-s = 1;
-fov = 1;
-thrld = 0.25;
+function events_stim = get_spikes_stim(dat_sorted,fov,thrld,stim_num)
 
-%function get_spikes(dat_sorted, fov,stim_num)
-% define stimulus
 stimulus = {'e3', 'e2', 'e1', 'd3', 'd2', 'd1', 'c3', 'c2', 'c1', 'blank'};
-stim = stimulus{s};
+stim = stimulus{stim_num};
 
 num_rois = numel(fieldnames(dat_sorted{fov}.deNoise_dff));
 trials = length(dat_sorted{1}.deNoise_dff.ROI1.(stim));
 events_stim = zeros(num_rois, trials);
 
-for r = 1:length(num_rois)
+for r = 1:num_rois
     roi = ['ROI', num2str(r)];
     stim_deriv = diff(dat_sorted{1}.deNoise_dff.(roi).(stim),1, 2);
     
@@ -20,7 +15,6 @@ for r = 1:length(num_rois)
     [event_nroi, event_idx] = find(stim_deriv >= thrld);
     
     events_ROI = zeros(1,length(stim_deriv));
-    
     % create population vector
     for idx = 1:length(event_nroi)
         if (event_idx(idx) > 4) && (event_idx(idx) < 13)
@@ -30,12 +24,4 @@ for r = 1:length(num_rois)
     events_stim(r,:) = events_ROI;
 end
 
-plot(stim_deriv.')
-
-% plot(blank_deriv_avg)
-% z = zscore(blank_deriv_avg);
-% plot(z)
-
-% e3 = field_1_traceByStim.deNoise_dff.ROI1.d1;
-% plot(e3.')
-
+end

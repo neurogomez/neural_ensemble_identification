@@ -16,7 +16,10 @@ dat_summary = get_info(data,stimuli_info, num_fields);
 % figure(2)
 % plot(z)
 % 
+thrld = 0.25;
+fov = 1;
+stim_num = 1;
+events_stim = get_spikes_stim(dat_sorted,fov,thrld,stim_num);
 
-ROInum = 17;
-thresh = 5;
-[z, mu, sigma] = plot_zscore(data,frameRate,ROInum, thresh);
+mymap = [0 0 1; 1 0 0];
+heatmap(events_stim, 'Colormap', gray)

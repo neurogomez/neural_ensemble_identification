@@ -1,21 +1,21 @@
-r = 6;
+r = 7;
 s = 1;
 fov = 1;
 thrld = 0.25;
 
-%function get_spikes(dat_sorted, fov,stim_num)
+function get_spikes_stim(dat_sorted, fov,stim_num)
 
 stimulus = {'e3', 'e2', 'e1', 'd3', 'd2', 'd1', 'c3', 'c2', 'c1', 'blank'};
-stim = stimulus{s};
+stim = stimulus{stim_num};
 
 num_rois = numel(fieldnames(dat_sorted{fov}.deNoise_dff));
 trials = length(dat_sorted{1}.deNoise_dff.ROI1.(stim));
 events_stim = zeros(num_rois, trials);
 
-% for r = 1:length(num_rois)
+for r = 1:num_rois
     roi = ['ROI', num2str(r)];
     stim_deriv = diff(dat_sorted{1}.deNoise_dff.(roi).(stim),1, 2);
-    
+    plot(stim_deriv.')
     % find spike event indices
     [event_nroi, event_idx] = find(stim_deriv >= thrld);
     
@@ -27,5 +27,6 @@ events_stim = zeros(num_rois, trials);
         end
     end
     events_stim(r,:) = events_ROI;
-% end
+end
 
+end
