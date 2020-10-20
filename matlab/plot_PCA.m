@@ -10,7 +10,17 @@ custom_cmap = [0.702,0.000,0.000;
           1.000,0.663,0.404;
           1.000,0.859,0.345];
 
-scatter(score(:,1), score(:,2),10,stim_label)% projection onto first 2 components
+cmap2 = [0.247,0.244,0.249;
+0.231,0.225,0.239;
+0.212,0.185,0.218;
+0.201,0.148,0.199;
+0.223,0.101,0.176;
+0.231,0.041,0.138;
+0.206,0.018,0.086;
+0.152,0.000,0.067;
+0.103,0.000,0.031];
+
+scatter(score(:,1), score(:,2),10,stim_label) % projection onto first 2 components
 colormap(custom_cmap)
 colorbar
 xlim([-2,2])
