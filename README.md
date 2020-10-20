@@ -2,8 +2,9 @@
 # Feldman Lab - Identifying Neural Ensembles
 *Goal*: identify neural ensembles in S1 from calcium imaging data
 *Method*: TBD
-- try PCA + clustering to identify prinicple ensemble defining neurons 
-- try Yuste Lab's CRF method
+1. PCA + clustering to identify prinicple ensemble defining neurons 
+2. try Yuste Lab's CRF method
+3. Look into other algorithms: NMF, 
 
 ## Data Set
 Han Chin's longitudinal 2P calcium imaging data
@@ -32,14 +33,6 @@ The .mat files are stored in the folder 'data': available at https://drive.googl
 __Instructions__
 - clone repo and create 'data' folder in root containing 'calcium_data.mat' and 'stimuli_info.mat'
 - data can be downloaded from https://drive.google.com/drive/folders/1O0PwG1FuS7czanlooS2ZPNizAnqvUCWR?usp=sharing
-- run 'main.m'
+- ipynb notebooks contain matlab code with analysis
 
-### Plan
-- ~~create get_info() fxn to extract trial information data~~
-- ~~determine method for determining spikes from dF/f: what threshold?~~
-- ~~write function to extract individual trial traces from movies~~ --> Han Chin already has function
-- ~~write function to determine spike or no spike -> using dF/F threhold~~
-- ~~write function to organize data into population arrary: all trials vs blanks~~
-- determine which method to try first for ensemble identification
-   - PCA followed by k-means?, SVD?, look at literature
-- ~~First pass at PCA with population ensemble~~
+
