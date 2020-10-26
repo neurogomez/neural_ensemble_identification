@@ -24,3 +24,11 @@ events_spont = get_spikes_spont(dat_sorted,fov,tbin,thrld);
 % scatter(score(:,1), score(:,2))
 % figure(2)
 % var_exp = plot_varexplained(latent);
+
+% cluster_info{c}.idx- pa_size(c,2)
+%     pa_size(stim_num,1) = length(dat_sorted{fov}.dff.ROI1.(stim));
+%     pa_size(:,2) = cumsum(pa_size(:,1)) - pa_size(1,1);
+%     
+% for c = 1:cluster_num
+%     cluster_info{c}.idx = cluster_info{c}.idx - pa_size(c,2);
+% end
