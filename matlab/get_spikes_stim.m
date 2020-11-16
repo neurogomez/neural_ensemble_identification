@@ -1,4 +1,4 @@
-function events_stim = get_spikes_stim(dat_sorted,fov,thrld,tbin, stim_num)
+function events_stim = get_spikes_stim(dat_sorted,fov,thrld, stim_onset, tbin, stim_num)
 
 stimulus = {'e3', 'e2', 'e1', 'd3', 'd2', 'd1', 'c3', 'c2', 'c1', 'blank'};
 stim = stimulus{stim_num};
@@ -7,7 +7,7 @@ num_rois = numel(fieldnames(dat_sorted{fov}.deNoise_dff));
 trials = length(dat_sorted{fov}.deNoise_dff.ROI1.(stim));
 events_stim = zeros(num_rois, trials);
 
-stim_onset = 5;
+%stim_onset = 5;
 frameRate = 7.4811;
 t_end = stim_onset + round(tbin*frameRate);
 

@@ -10,6 +10,7 @@ for stim_num = 1: length(stimulus)-1
 end
 
 map = [(1:length(map)).',map];
+
 cluster_num = max(cluster_lbls);
 
 for cluster = 1:cluster_num

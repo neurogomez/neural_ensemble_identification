@@ -1,6 +1,7 @@
 function plot_clst_barrels(x_pst,y_pst, label,column_identity, titlename, sz)
 
 bcolumns = {'none','e3', 'e2', 'e1', 'd3', 'd2', 'd1', 'c3', 'c2', 'c1'};
+stimulus = {'e3', 'e2', 'e1', 'd3', 'd2', 'd1', 'c3', 'c2', 'c1', 'blank'};
 
 syms = {'o' '+' '*' '.' 'x' 's' 'd' 'p' 'h' '^'};
 hold on % important
@@ -17,13 +18,15 @@ c = colorbar('southoutside');
 
 hold on
 columns2plot = unique(column_identity);
+clabels = {};
 l = zeros(length(columns2plot), 1);
 for n = 1:length(columns2plot)
     l(n) = scatter(NaN, NaN,30, 'filled', 'b',syms{columns2plot(n)+1});
+    clabels{end+1} = bcolumns{columns2plot(n)+1};
 end
 
 ylabel(c, 'Average dF/F')
-legend(l, bcolumns, 'location', 'eastoutside');
+legend(l, clabels, 'location', 'eastoutside');
 
 xlim([0,513])
 ylim([0,513])
