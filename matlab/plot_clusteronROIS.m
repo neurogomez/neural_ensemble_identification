@@ -5,7 +5,7 @@ J = customcolormap([0 0.5 1], {'#000034','#007cff','#e3ffff'});
 colormap(J)
 caxis([0,0.5])
 h = colorbar;
-ylabel(h, 'Average dF/F')
+%ylabel(h, 'Z-score Avg dF/F')
 xlim([0,513])
 ylim([0,513])
 set(gca,'xtick',[])
