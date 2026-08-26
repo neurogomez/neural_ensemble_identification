@@ -1,2 +1,18 @@
 data
 fromHanChin
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MATLAB
+*.asv
+*.m~
+
+# Local-only: superseded notebooks and cleanup staging, kept for personal
+# reference rather than published (see README for what replaced them)
+_to_delete/
