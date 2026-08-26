@@ -16,9 +16,7 @@ The analysis runs in MATLAB via a Jupyter MATLAB kernel; the `matlab/` folder ho
 | 2 | [`02_eda_pca_exploration.ipynb`](02_eda_pca_exploration.ipynb) | Explores PCA across time bins and stimulus groupings to find the window that best separates whisker-evoked ensembles; introduces weighted PCA as a refinement. |
 | 3 | [`03_ensemble_identification_and_characterization.ipynb`](03_ensemble_identification_and_characterization.ipynb) | The core analysis: k-means clustering on the PCA-projected population array (validated against a random-shuffle control and silhouette analysis), then characterizes each ensemble's spatial (barrel column) organization and whisker tuning. |
 | 4 | [`04_refined_ensemble_detection.ipynb`](04_refined_ensemble_detection.ipynb) | Tests whether using graded spike probability, instead of a binary threshold, improves ensemble detection. |
-| 5 | [`05_alternative_methods_rica_crf.ipynb`](05_alternative_methods_rica_crf.ipynb) | Benchmarks PCA + k-means against Reconstruction ICA and sets up Conditional Random Fields (Yuste Lab method) as further comparison points. |
-
-Notebook 3 combines what were originally two separate working notebooks (ensemble identification, then characterization) into one continuous narrative, since the underlying analysis was really one pipeline split across two sessions. The full set of original, more granular notebooks is kept locally for my own reference (see [Notes on this repo](#notes-on-this-repo)).
+| 5 | [`05_alternative_methods_rica_crf.ipynb`](05_alternative_methods_rica_crf.ipynb) | Benchmarks PCA + k-means against Reconstruction ICA and sets up Conditional Random Fields (Yuste Lab method) as further comparison points. 
 
 ## Data
 
