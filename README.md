@@ -1,10 +1,10 @@
-# Identifying Neural Ensembles in Barrel Cortex
+# Identifying neural ensembles from calcium imaging data 
 
-A PhD rotation project in the Feldman Lab (UC Berkeley): identifying and characterizing neural ensembles in mouse primary somatosensory cortex (S1, barrel cortex) from 2-photon calcium imaging data recorded during whisker stimulation.
+A PhD rotation project aimed at identifying and characterizing neural ensembles in mouse primary somatosensory cortex (S1, barrel cortex) from 2-photon calcium imaging data recorded during whisker stimulation.
 
-**Goal:** determine whether whisker-evoked activity organizes into distinct, spatially and functionally coherent neural ensembles, and how the choice of detection method (PCA vs. ICA vs. CRF) and preprocessing (binary spikes vs. spike probability) affects what's found.
+**Goal:** determine whether stimulus-evoked neural activity organizes into distinct and functionally connected neural ensembles. Neural ensmbles are defined as co-active groups of neurons that are functionally connected. Here I tested different detection methods (PCA vs. ICA vs. CRF) and preprocessing (binary spikes vs. spike probability) to see if that impacted neural ensemble identity and detection. 
 
-**Approach:** infer spikes from raw calcium traces, then compare three ensemble-detection strategies: PCA + k-means clustering (the primary method, iterated and refined across three notebooks), Reconstruction ICA (RICA), and Conditional Random Fields (the method used by the Yuste Lab for this class of problem). Each identified ensemble is characterized by its spatial organization across barrel columns and its whisker tuning.
+**Approach:** infer spikes from raw calcium traces, then compare three ensemble-detection strategies: PCA + k-means clustering (the primary method, iterated and refined across three notebooks), Reconstruction ICA (RICA), and Conditional Random Fields (a method developed by the Yuste Lab for this class of problem). Each identified ensemble is characterized by its spatial organization across barrel columns and its whisker tuning.
 
 ## Notebooks
 
@@ -22,7 +22,7 @@ Notebook 3 combines what were originally two separate working notebooks (ensembl
 
 ## Data
 
-Han Chin's longitudinal 2-photon calcium imaging data: 2 mice, 4 fields of view (FOVs) each, 512x512 pixel FOV, 7.4811 Hz frame rate.
+A post-doctoral fellow's longitudinal 2-photon calcium imaging data: 2 mice, 4 fields of view (FOVs) each, 512x512 pixel FOV, 7.4811 Hz frame rate.
 
 ![Data Summary](documents/dat_summary.png)
 
@@ -53,12 +53,6 @@ Feldman-NeuralEnsembles/
 │   └── dat_summary.png
 └── data/                   # not tracked; download separately, see Data above
 ```
-
-## Notes on this repo
-
-- **Consolidated from 7 notebooks to 5.** The original notebooks (`02a`–`02d`, `03a`) grew somewhat organically across working sessions, with real overlap between them (PCA and clustering both showed up in three different notebooks). They're merged and reorganized above into a single narrative: explore, identify, refine, compare. The originals are kept locally, not published here, in case I want to reference the exact original working history.
-- **One abandoned direction left out.** An early, four-cell attempt at porting part of the analysis to Python (`04_OtherMethods-Python.ipynb`) never got past a setup cell and isn't included.
-- **Repo hygiene:** removed a stray `.gitignore.rtf` duplicate, seven tracked Jupyter checkpoint files, and a tracked `.DS_Store` that shouldn't have been committed.
 
 ## Author
 
